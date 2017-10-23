@@ -1,0 +1,16 @@
+.chat-window{
+  width:380px;
+  height:517px;
+  background-color:$white;
+  box-shadow: 0 9px 13px;
+}
+
+
+
+.chat-window-header{
+  height:56px;
+  color:$header-text-color;
+  .chat-window-close{
+    font-size:14px;
+  }
+}

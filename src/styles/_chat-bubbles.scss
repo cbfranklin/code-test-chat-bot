@@ -1,0 +1,23 @@
+.chat-bubble{
+  padding:20px 20px 0 20px;
+  border-radius:7px 7px 7px 0;
+}
+
+.chat-partner .chat-bubble{
+  background-color:$background-color;
+}
+
+.chat-user .chat-bubble{
+  background-color:$border-color;
+}
+
+.chat-options .chat-bubble{
+  background-color:$brand-purple;
+}
+
+.chat-partner-typing .chat-bubble{
+  background-color:$border-color;
+  .chat-partner-typing-oval{
+    background-color:$background-color;
+  }
+}
