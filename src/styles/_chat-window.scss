@@ -3,14 +3,24 @@
   height:517px;
   background-color:$white;
   box-shadow: 0 9px 13px;
-}
-
-
-
-.chat-window-header{
-  height:56px;
-  color:$header-text-color;
-  .chat-window-close{
-    font-size:14px;
+  font-family:$font-family-stack;
+  .chat-window-header{
+    height:56px;
+    width:380px;
+    color:$white;
+    background-color:$header-text-color;
+    font-size:20px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    /* all immediate children of */
+    > *{
+      padding:20px;
+    }
+    .chat-window-close{
+      font-size:30px;
+      /* compensating for short x-height of unicode multiply character */
+      margin-top:-5px;
+    }
   }
 }

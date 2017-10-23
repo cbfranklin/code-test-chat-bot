@@ -1,3 +1,9 @@
 @import "variables";
 @import "chat-window";
 @import "chat-bubbles";
+
+.chat-layer{
+  position:absolute;
+  bottom:0;
+  right:0;
+}
