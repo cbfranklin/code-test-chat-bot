@@ -2,8 +2,14 @@
   width:380px;
   height:517px;
   background-color:$white;
-  box-shadow: 0 9px 13px;
+  /* no box shadow color specified in mockup */
+  box-shadow: 0 9px 13px rgba(0,0,0,0);
   font-family:$font-family-stack;
+  overflow:hidden;
+  .chat-window-timeline{
+    height:461px;
+    overflow-y: scroll;
+  }
   .chat-window-header{
     height:56px;
     width:380px;
@@ -13,13 +19,14 @@
     display:flex;
     align-items: center;
     justify-content: space-between;
-    /* all immediate children of */
+    /* all immediate children thereof */
     > *{
       padding:20px;
     }
     .chat-window-close{
-      font-size:30px;
+      @extend .user-interaction-clickable;
       /* compensating for short x-height of unicode multiply character */
+      font-size:30px;
       margin-top:-5px;
     }
   }

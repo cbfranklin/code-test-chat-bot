@@ -43,7 +43,8 @@ module.exports = function(grunt) {
                     flatten: true,
                     dest: './dist/js',
                     src: [
-                        './node_modules/jquery/dist/jquery.min.js'
+                        './node_modules/jquery/dist/jquery.min.js',
+                        './node_modules/mustache/mustache.min.js'
                     ]
                 }]
             },
@@ -77,6 +78,10 @@ module.exports = function(grunt) {
             styles: {
                 files: ["./src/styles/**/*"],
                 tasks: ["sass"]
+            },
+            scripts: {
+                files: ["./src/scripts/**/*"],
+                tasks: ["copy:js"]
             },
             views: {
                 files: ["./src/views/**/*"],

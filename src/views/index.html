@@ -19,34 +19,43 @@
           </div>
         </div>
         <div class="chat-window-timeline">
-          <div class="chat-message chat-partner">
-            <div class="chat-bubble">Hi! Do you have any questions I can answer for you?</div>
-          </div>
-          <div class="chat-message chat-user">
-            <div class="chat-bubble">Test message</div>
-          </div>
-          <div class="chat-message chat-user-options">
-            <div class="chat-bubble">
-              Not now
-            </div>
-            <div class="chat-bubble">
-              Yes, please
-            </div>
-          </div>
-          <div class="chat-message chat-partner">
-            <div class="chat-bubble">No problem! If you decide you need me, just click "Contact Us."</div>
-          </div>
-          <div class="chat-message chat-partner-typing">
-            <div class="chat-bubble">
-              <div class="chat-partner-typing-oval"></div>
-              <div class="chat-partner-typing-oval"></div>
-              <div class="chat-partner-typing-oval"></div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
+
+    <div class="templates">
+      <script type="text/template" class="template-chat-partner-typing">
+        <div class="chat-message chat-partner-typing">
+          <div class="chat-bubble">
+            <div class="chat-partner-typing-oval"></div>
+            <div class="chat-partner-typing-oval"></div>
+            <div class="chat-partner-typing-oval"></div>
+          </div>
+        </div>
+      </script>
+      <script type="text/template" class="template-chat-partner">
+        <div class="chat-message chat-partner">
+          <div class="chat-bubble">{{message}}</div>
+        </div>
+      </script>
+      <script type="text/template" class="template-chat-user">
+        <div class="chat-message chat-user">
+          <div class="chat-bubble">{{message}}</div>
+        </div>
+      </script>
+      <script type="text/template" class="template-chat-user-options">
+        <div class="chat-message chat-user-options">
+          {{#options}}
+          <div class="chat-bubble">
+            {{.}}
+          </div>
+          {{/options}}
+        </div>
+      </script>
+    </div>
+
     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/mustache.min.js"></script>
     <script type="text/javascript" src="js/chat.js"></script>
 </body>
 

@@ -5,7 +5,11 @@
     font-size:17px;
     line-height:20px;
     padding:20px;
-    max-width:66%;
+    max-width:60%;
+    color:$ghost-color;
+  }
+  &:last-child{
+    padding-bottom:20px;
   }
 }
 
@@ -36,9 +40,10 @@
 }
 
 .chat-user-options .chat-bubble{
+  @extend .user-interaction-clickable;
   background-color:$brand-purple;
   color:$white;
   border-radius:7px 7px 0 7px;
-  max-width:33%;
+  max-width:40%;
   float:right;
 }
